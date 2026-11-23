@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:background="@color/paper" android:paddingStart="12dp" android:paddingEnd="12dp">
+    <EditText android:id="@+id/road_input" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:minHeight="48dp" android:inputType="text" android:singleLine="true"
+        android:imeOptions="actionSearch" android:hint="Search road name or number"
+        android:maxLength="100" android:textSize="15sp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:orientation="horizontal">
+        <Spinner android:id="@+id/category" android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="4" android:contentDescription="Situation type"/>
+        <Spinner android:id="@+id/radius" android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="5" android:contentDescription="Distance from Glasgow"/>
+        <Button android:id="@+id/map_results" style="@style/Control" android:layout_width="wrap_content"
+            android:layout_height="match_parent" android:text="Map" android:contentDescription="Map filtered results"/>
+    </LinearLayout>
+</LinearLayout>

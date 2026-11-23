@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/white">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:gravity="center_vertical"
+        android:orientation="horizontal" android:paddingStart="7dp" android:paddingEnd="8dp" android:background="#E3F0EE">
+        <Button android:id="@+id/back_results" style="@style/Control" android:layout_width="wrap_content"
+            android:layout_height="match_parent" android:text="Results"/>
+        <TextView android:id="@+id/panel_title" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:gravity="center" android:textStyle="bold" android:textColor="@color/ink"
+            android:maxLines="1" android:ellipsize="end" android:textSize="15sp"/>
+        <Button android:id="@+id/panel_action" style="@style/Control" android:layout_width="wrap_content"
+            android:layout_height="match_parent" android:text="Map"/>
+    </LinearLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <ScrollView android:id="@+id/detail_scroll" android:layout_width="match_parent" android:layout_height="match_parent"
+            android:fillViewport="true">
+            <LinearLayout android:id="@+id/detail_body" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp"/>
+        </ScrollView>
+        <LinearLayout android:id="@+id/map_panel" android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical" android:visibility="gone">
+            <org.gcu.traffic.ScotlandMapView android:id="@+id/map_view" android:layout_width="match_parent"
+                android:layout_height="0dp" android:layout_weight="1"/>
+            <TextView android:id="@+id/map_caption" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:padding="7dp" android:textSize="11sp" android:textColor="@color/ink" android:background="#E3F0EE"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
